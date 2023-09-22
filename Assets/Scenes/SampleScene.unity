@@ -372,6 +372,7 @@ GameObject:
   - component: {fileID: 1903165181}
   - component: {fileID: 1903165185}
   - component: {fileID: 1903165186}
+  - component: {fileID: 1903165187}
   m_Layer: 0
   m_Name: GameBoard
   m_TagString: Untagged
@@ -482,11 +483,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903165180}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Size: {x: 10, y: 4, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1903165187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903165180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1800a12f380127f43bfd835a02e939fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4500082269211735148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -521,7 +534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3137623235197962006, guid: 48210bf64b7fffb4d9a2711f158105dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.54705
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3137623235197962006, guid: 48210bf64b7fffb4d9a2711f158105dd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -529,7 +542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3137623235197962006, guid: 48210bf64b7fffb4d9a2711f158105dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.5624914
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3137623235197962006, guid: 48210bf64b7fffb4d9a2711f158105dd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -649,6 +662,7 @@ PrefabInstance:
       propertyPath: _gameBoard
       value: 
       objectReference: {fileID: 1903165180}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 97e9beba11f3cb04fa924422b965d939, type: 3}
