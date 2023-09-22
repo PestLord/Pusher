@@ -16,17 +16,13 @@ public class CylinderController : MonoBehaviour
     
     void Rebuild()
     {
-        _currentColor = _manager.ChangeColor(gameObject);
+        _currentColor = _manager.ChangeColor();
         GetComponent<Renderer>().material.color = _currentColor;
-        transform.position = _manager.ChangePosition(gameObject);
+        transform.position = _manager.ChangePosition();
         Debug.Log(transform.position);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     private void OnCollisionEnter(Collision other)
     {

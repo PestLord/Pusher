@@ -6,20 +6,19 @@ using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
-    private Vector3 _mousePosition;
     private Rigidbody _rigidbody;
     private Vector3 vector3;
     private Vector3 _playerPosition;
+    private Vector3 _startPosition;
 
-    [SerializeField] private GameObject _forcePoint;
     [SerializeField] private float _forceMultiplicator;
-    [SerializeField] private GameObject _player;
     [SerializeField] private float _maxForce;
 
     private Vector3 hitPos;
     // Start is called before the first frame update
     void Start()
     {
+        _startPosition = transform.position;
         _rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -28,11 +27,11 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            _mousePosition = Input.mousePosition;
             RaycastHit hit;
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
+                _rigidbody.velocity = Vector3.zero;
                 Debug.Log(hit.point);
                 _playerPosition = GetComponent<Transform>().localPosition;
                 hitPos = hit.transform.position;
@@ -42,5 +41,14 @@ public class PlayerController : MonoBehaviour
                 _rigidbody.AddForce(vector3.normalized * minimum);
             }
         }
+    }
+    
+    public void MoveToStartPoint()
+    {
+        // Переносим игрока на стартовую точку.
+        transform.position = _startPosition;
+
+        // Зануляем ему скорость.
+        _rigidbody.velocity = Vector3.zero;
     }
 }
