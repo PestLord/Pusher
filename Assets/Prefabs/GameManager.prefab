@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5624289300751681060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3789056376000308129}
+  - component: {fileID: 8696286678108256063}
+  - component: {fileID: 3919746033770541382}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3789056376000308129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5624289300751681060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8696286678108256063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5624289300751681060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 484bd5581123aea4aa0f81e24e9bfd32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _colors:
+  - {r: 1, g: 0.10917859, b: 0, a: 0}
+  - {r: 0.012079239, g: 1, b: 0, a: 0}
+  - {r: 0.96432745, g: 1, b: 0, a: 0}
+  _enemyCount: 6
+  _colorChangeController: {fileID: 5537594009722391850, guid: e2c394f962b4f3d47bb3e0998ef269be, type: 3}
+  _playerController: {fileID: 7436522348890711383, guid: 48210bf64b7fffb4d9a2711f158105dd, type: 3}
+  _player: {fileID: 1279231068757394266, guid: 48210bf64b7fffb4d9a2711f158105dd, type: 3}
+  _enemy: {fileID: 8816794757512481616, guid: dae9dcd898b53714ba62d71fbefe7e8a, type: 3}
+  _sphere: {fileID: 7491958209447407298, guid: e2c394f962b4f3d47bb3e0998ef269be, type: 3}
+  _cylinderController: {fileID: 7548216280503527010, guid: dae9dcd898b53714ba62d71fbefe7e8a, type: 3}
+  _gameBoard: {fileID: 0}
+--- !u!65 &3919746033770541382
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5624289300751681060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30, y: 1, z: 30}
+  m_Center: {x: 0, y: 0, z: 0}
