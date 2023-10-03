@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CylinderController : MonoBehaviour
 {
+    public Action Destroyed;
+    
     private Manager _manager;
     private Color _currentColor;
     // Start is called before the first frame update

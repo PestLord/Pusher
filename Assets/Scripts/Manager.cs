@@ -1,9 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Manager : MonoBehaviour
 {
+    public Action<Color> EnemyDied;
+    public Action<Color> EnemySpawned;
+
     [SerializeField] private Color[] _colors;
 
     [SerializeField] private int _enemyCount = 6;
@@ -13,9 +18,10 @@ public class Manager : MonoBehaviour
 
     [SerializeField] private GameObject _gameBoard;
     private float _boardSize;
-    
+    public Color[] Colors { get; set; }
     private void Awake()
-    { 
+    {
+        Colors = _colors;
         _boardSize = _gameBoard.transform.localScale.x;
         for (int i = 0; i < _enemyCount; i++)
         {
@@ -35,4 +41,5 @@ public class Manager : MonoBehaviour
     {
         return _colors[Random.Range(0, _colors.Length)];
     }
+    
 }
