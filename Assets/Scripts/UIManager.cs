@@ -12,14 +12,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Image _playerImage;
     [SerializeField] private Image _cylinderImage;
     [SerializeField] private Transform _parent;
-    private Color[] _colors;
+    [SerializeField] private Color[] _colors;
     private int _count;
     private Dictionary<Color, MenuElement> _items;
     
     // Start is called before the first frame update
     void Start()
     {
-        _colors = _gameManager.Colors;
         for (int i = 0; i < _colors.Length; i++)
         {
             var item = Instantiate(_menuItem, _parent);
